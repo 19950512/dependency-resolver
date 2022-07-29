@@ -12,9 +12,25 @@
     "require": {
         "php": ">=7.0"
     },
+    "require-dev": {
+        "pestphp/pest-plugin": "^1.0.0",
+        "phpunit/phpunit": "^9.5",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-mock": "^1.0"
+    },
     "autoload": {
         "psr-4": {
             "CViniciusSDias\\DependencyResolver\\": "src/"
         }
+    },
+    "config": {
+        "allow-plugins": true,
+        "platform": {
+            "php": "8.0"
+        }
+    },
+    "scripts":{
+        "test": "/usr/bin/php8.0 vendor/bin/pest",
+        "coverage": "/usr/bin/php8.0 vendor/bin/pest --coverage"
     }
 }
